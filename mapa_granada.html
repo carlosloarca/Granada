@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7597feb1d4f82dc5c18ec74579101cd0 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_7597feb1d4f82dc5c18ec74579101cd0" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7597feb1d4f82dc5c18ec74579101cd0 = L.map(
+                "map_7597feb1d4f82dc5c18ec74579101cd0",
+                {
+                    center: [37.1773, -3.5986],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_dc0cf367b803dc0e94a56b4dffa063ee = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_dc0cf367b803dc0e94a56b4dffa063ee.addTo(map_7597feb1d4f82dc5c18ec74579101cd0);
+        
+    
+            var heat_map_f4528185fa42264c8e9a1d3263cb531a = L.heatLayer(
+                [[37.1773, -3.5986, 35.0], [37.095, -3.3947, 89.0], [36.7429, -3.5177, 62.0], [36.9299, -3.3125, 41.0], [37.2307, -3.7038, 38.0]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 13,
+  "radius": 20,
+  "blur": 15,
+}
+            );
+        
+    
+            heat_map_f4528185fa42264c8e9a1d3263cb531a.addTo(map_7597feb1d4f82dc5c18ec74579101cd0);
+        
+    
+            var circle_marker_085870d4399c8ece213ca48c32ca450e = L.circleMarker(
+                [37.1773, -3.5986],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.0, "stroke": true, "weight": 3}
+            ).addTo(map_7597feb1d4f82dc5c18ec74579101cd0);
+        
+    
+        var popup_6e7cb877c167a85e5a1afed1b5f0919a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bec4f759a22a384ffe45e379ef58a18e = $(`<div id="html_bec4f759a22a384ffe45e379ef58a18e" style="width: 100.0%; height: 100.0%;">         <b>Ciudad de Granada</b><br>         Ocupación: 35%<br>         Tipo: Cultural         </div>`)[0];
+                popup_6e7cb877c167a85e5a1afed1b5f0919a.setContent(html_bec4f759a22a384ffe45e379ef58a18e);
+            
+        
+
+        circle_marker_085870d4399c8ece213ca48c32ca450e.bindPopup(popup_6e7cb877c167a85e5a1afed1b5f0919a)
+        ;
+
+        
+    
+    
+            var circle_marker_d8c29528f07452ee96b8028dc2b9b1eb = L.circleMarker(
+                [37.095, -3.3947],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.8, "stroke": true, "weight": 3}
+            ).addTo(map_7597feb1d4f82dc5c18ec74579101cd0);
+        
+    
+        var popup_5dc54aa1aecb98b515ace52800f1ec0c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_91509298358f444efb48d50d57163801 = $(`<div id="html_91509298358f444efb48d50d57163801" style="width: 100.0%; height: 100.0%;">         <b>Sierra Nevada</b><br>         Ocupación: 89%<br>         Tipo: Deportivo         </div>`)[0];
+                popup_5dc54aa1aecb98b515ace52800f1ec0c.setContent(html_91509298358f444efb48d50d57163801);
+            
+        
+
+        circle_marker_d8c29528f07452ee96b8028dc2b9b1eb.bindPopup(popup_5dc54aa1aecb98b515ace52800f1ec0c)
+        ;
+
+        
+    
+    
+            var circle_marker_0e27f92e72eb8b0a531339bcb806328b = L.circleMarker(
+                [36.7429, -3.5177],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.4, "stroke": true, "weight": 3}
+            ).addTo(map_7597feb1d4f82dc5c18ec74579101cd0);
+        
+    
+        var popup_6c94cb35ba66cbbc6e0860e326d69200 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_08f309102c2f1cd91f53d10d02ec1ab6 = $(`<div id="html_08f309102c2f1cd91f53d10d02ec1ab6" style="width: 100.0%; height: 100.0%;">         <b>Costa Tropical</b><br>         Ocupación: 62%<br>         Tipo: Sol y playa         </div>`)[0];
+                popup_6c94cb35ba66cbbc6e0860e326d69200.setContent(html_08f309102c2f1cd91f53d10d02ec1ab6);
+            
+        
+
+        circle_marker_0e27f92e72eb8b0a531339bcb806328b.bindPopup(popup_6c94cb35ba66cbbc6e0860e326d69200)
+        ;
+
+        
+    
+    
+            var circle_marker_bd586bcae7bccf8be33f2b9c0e3db060 = L.circleMarker(
+                [36.9299, -3.3125],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.2, "stroke": true, "weight": 3}
+            ).addTo(map_7597feb1d4f82dc5c18ec74579101cd0);
+        
+    
+        var popup_987251eeb7d164a7eb9555318b4e80c8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e1b82f445326d66fae18e07993a61e18 = $(`<div id="html_e1b82f445326d66fae18e07993a61e18" style="width: 100.0%; height: 100.0%;">         <b>Alpujarra</b><br>         Ocupación: 41%<br>         Tipo: Rural         </div>`)[0];
+                popup_987251eeb7d164a7eb9555318b4e80c8.setContent(html_e1b82f445326d66fae18e07993a61e18);
+            
+        
+
+        circle_marker_bd586bcae7bccf8be33f2b9c0e3db060.bindPopup(popup_987251eeb7d164a7eb9555318b4e80c8)
+        ;
+
+        
+    
+    
+            var circle_marker_8b5048f2aade517c7b169f57f2b65b19 = L.circleMarker(
+                [37.2307, -3.7038],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.6, "stroke": true, "weight": 3}
+            ).addTo(map_7597feb1d4f82dc5c18ec74579101cd0);
+        
+    
+        var popup_f6d84c135ea9e68b75ef6baae056ea0e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_16239e248566ca8dcf7a0dbc61e45914 = $(`<div id="html_16239e248566ca8dcf7a0dbc61e45914" style="width: 100.0%; height: 100.0%;">         <b>Granada Metropolitana</b><br>         Ocupación: 38%<br>         Tipo: Negocios         </div>`)[0];
+                popup_f6d84c135ea9e68b75ef6baae056ea0e.setContent(html_16239e248566ca8dcf7a0dbc61e45914);
+            
+        
+
+        circle_marker_8b5048f2aade517c7b169f57f2b65b19.bindPopup(popup_f6d84c135ea9e68b75ef6baae056ea0e)
+        ;
+
+        
+    
+    
+            tile_layer_dc0cf367b803dc0e94a56b4dffa063ee.addTo(map_7597feb1d4f82dc5c18ec74579101cd0);
+        
+    
+            heat_map_f4528185fa42264c8e9a1d3263cb531a.addTo(map_7597feb1d4f82dc5c18ec74579101cd0);
+        
+</script>
+</html>
